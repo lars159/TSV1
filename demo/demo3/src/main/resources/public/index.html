@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+ 
+</head>
+<body>
+	<div class="container">
+		<h1>Order food</h1>
+		<!--   
+		 <form action="/uploadFile" method="POST" enctype="multipart/form-data">
+		 	<input type="text" name="name"> 
+		    <input type="file" name="file">
+		    <input type="submit" value="Upload"> 
+		  </form>
+		  
+		  -->
+		<form action="/upload" method="POST"  >
+
+			<label>Email address</label> <input type="email"
+				class="form-control" placeholder="enter email" required="true" name="email"> 
+			
+			<label>Password</label>
+			<input type="password" class="form-control" name="password">
+			<label>Text</label>
+			<input type="text" class="form-control" name="text">
+			<label>text area</label> 
+			<textarea  class="form-control"  name="textarea"></textarea>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+
+</body>
+</html>

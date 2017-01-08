@@ -1,3 +1,16 @@
+// types: s62 number string boolean
+string singel quate dubel qute dont mix
+
+// gå igenom ["",""] {asd : "sadf"}
+
+
+// sida array s71 object s.100
+
+
+// selection elemnts
+
+//Events s.281 monitorEvents(document.body)
+
 /*
 alert("confirm")
 

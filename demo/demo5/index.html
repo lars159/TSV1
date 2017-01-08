@@ -3,22 +3,31 @@
   <head>
  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  >
-    
- 
-
+     
   </head>
   <body>
       <div class="container">
-        <h1>Calc!</h1>
+        <h1 class="my-text">Calc!</h1>
           
-        a: <input class="form-controll" id="a">
-        b: <input class="form-controll" id="b">
-        a+b: <span id="resulat"></span>
-        <button class="btn btn-info">calc</button>
-        
-      </div>
+ Bind a click listner so that somthing is appended() to the
+
+button on click
+
+Create a new button that calls .show() hide() on a
+
+.
+Create a list and fill it with content using the $("li").each(function(){})
       
-       
-      <script src="app.js" type="application/javascript"></script>
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        
+      <script>
+          $(".my-text").text("demo");
+          var v= $(".my-text").text();
+          alert( v);
+          document.querySelector(".my-text").innerHTML = "demo2";
+          var v2 = document.querySelector(".my-text").innerHTML;
+          alert(v2);
+          </script>
+      </div>
   </body>
 </html>
