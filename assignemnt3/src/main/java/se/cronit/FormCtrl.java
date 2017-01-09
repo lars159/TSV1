@@ -11,6 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 public class FormCtrl {
+	/*
 	@RequestMapping(value="/uploadFile", method=RequestMethod.POST)
     public String postHandler(@RequestParam("file") MultipartFile file, @RequestParam("name") String name  ) throws IllegalStateException, IOException {
 		System.out.println(file.getOriginalFilename() + "name");
@@ -25,13 +26,12 @@ public class FormCtrl {
 	    return convFile;
 	}
 	
+	*/
 	@RequestMapping(value="/upload", method=RequestMethod.POST)
-    public String postHandler(@RequestParam(value="email", required=true) String email, 
-    						  @RequestParam("password") String passowrd,
-    						  @RequestParam("text") String text,
-    						  @RequestParam("password") String textarea 
-    						  ) throws IllegalStateException, IOException {
-		System.out.println(email +passowrd+ text); 
+    public String postHandler( 
+    						  @RequestParam("name") String name 
+    						  )  {
+		System.out.println(name); 
         return "Order done";
     }
 }
