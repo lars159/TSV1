@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
  
 
-@RestController
-@EnableAutoConfiguration
+
+@SpringBootApplication
 public class Main {
 
  
@@ -26,29 +26,7 @@ public class Main {
         SpringApplication.run(Main.class, args);
     }
     
-	@RequestMapping(value="/uploadFile", method=RequestMethod.POST)
-    public String postHandler(@RequestParam("file") MultipartFile file, @RequestParam("name") String name  ) throws IllegalStateException, IOException {
-		System.out.println(file.getOriginalFilename() + "name");
-		multipartToFile(file);
-        return "";
-    }
-	
-	public File multipartToFile(MultipartFile multipart) throws IllegalStateException, IOException 
-	{
-	    File convFile = new File("c:/workspace/" + multipart.getOriginalFilename());
-	    multipart.transferTo(convFile);
-	    return convFile;
-	}
-	
-	@RequestMapping(value="/upload", method=RequestMethod.POST)
-    public String postHandler(@RequestParam("email") String email, 
-    						  @RequestParam("password") String passowrd,
-    						  @RequestParam("text") String text,
-    						  @RequestParam("password") String textarea 
-    						  ) throws IllegalStateException, IOException {
-		System.out.println(email +passowrd+ text); 
-        return "";
-    }
+
 	
 }
 

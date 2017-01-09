@@ -17,7 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
  
 
 
-@EnableAutoConfiguration
+@SpringBootApplication
 public class Main {
 
  
@@ -25,7 +25,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         SpringApplication.run(Main.class, args);
     }
-    
+     
 
 	
 }

@@ -1,0 +1,3 @@
+1. If the result is negative set to red using addClass()
+2. If the result is posetiv set to green using addClass()
+3. If there is a error add the bootstrap modal error box using .modal('show')
