@@ -1,0 +1,47 @@
+<html>
+<body>
+Demo Ajax
+
+    
+    <img id="loader" src="https://media4.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif#2">    
+    <table id="traffic">
+        <tr>
+            <th>Title</th>
+            <th>Desc</th>
+            <th>Prio</th>
+        </tr>
+    
+    </table>
+    
+    <ul id="msg"></ul>
+    
+        <script
+  src="http://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+    
+    <script>
+    
+    $.get("http://api.sr.se/api/v2/traffic/messages?format=json",  function(data){
+        
+       $("#loader").hide(); 
+        console.log(data);
+        
+        
+        data.messages.forEach(function(i){
+            $("#traffic").append("<tr>" +"<td>" +i.title +"</td>"
+                                 +"<td>" +i.description +"</td>"+"<td>" +i.priority +"</td>" +"</tr>");
+ 
+            
+        }) 
+    })
+    
+    $("body").on('click', 'li', function(){
+         $(this).hide();
+    })
+    
+    </script>
+    
+</body>
+
+</html>

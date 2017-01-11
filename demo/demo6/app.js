@@ -1,55 +1,109 @@
-console.log("hello world");
+console.log("start");
+
+/*
+let b = "let b";
 
 if(true){
-    var a = 4 +3;
-    
-    let b = 4 +3;
-    
-}
-console.log("a ", a);
-
-for(let a=0;a<10;a++){
-    console.log(a);
+    let a = "var a";
 }
 
-var items = ["a","b","c","d","e"];
-for(let i in items){
+const c = {item : 1};
+console.log(c);
+c.item = 2;
+console.log(c);
+c = {};
+
+
+for(let i=0;i<4;i++){
     console.log(items[i]);
 }
 
+
+for(let i : items){
+    console.log(items[i]);
+}
+
+var items = ["a", "b", "c", "d"];
 items.forEach(function(i){
     console.log(i);
 })
 
-let filterResult = items.filter(function(i){
-    if(i == "a") {
+
+
+function doSomthing(callback){
+    console.log("doSomthing");
+    callback();
+}
+
+doSomthing(function(){
+    console.log("end of call");
+})
+
+
+
+let books = [{titel :"java", pages : 10},
+             {titel :"javaScript", pages : 50},
+             {titel :"css", pages : 100}];
+
+let filterResult = books.filter(function(b){
+    if(b.pages > 30){
         return true;
     } else {
         return false;
     }
-})
+});
+console.log(filterResult);
 
-let map = items.map(function(i){
-    return {item : i};
-})
-
-
-console.log(map);
-
-
-items.forEach( (i) => {
-    console.log(i);
-})
-
-items.forEach(i => console.log(i))
-
-class Book {
-     constructor(x ) {
-        this.x = x; 
-    }
-    toString() {
-        return  this.x ;
+let newArray = [];
+for(let i=0;i<4;i++){
+    console.log(books[i]);
+    if(b.pages > 30){
+        newArray.push(books[i]);
     }
 }
-let b = new Book(100);
-console.log(b);
+
+let items = ["a", "b", "c", "d"];
+let mapResult = items.map(function(i){
+    return {titel : i};
+})
+console.log(mapResult);
+
+
+
+var items = ["a", "b", "c", "d"];
+items.forEach(i => console.log(i))
+
+
+
+let items = ["a", "b", "c", "d"];
+let mapResult = items.map(i => return {titel : i})
+console.log(mapResult);
+*/
+
+class Book {
+    
+    constructor(p){
+        this.pages = p;
+    }
+    
+    getPages(){
+        return this.pages;
+    }
+    
+    toString(){
+        return "Titel of book";
+    }
+    
+    static getVendor() {
+        return "Bonier";
+    }
+    
+}
+ 
+//let b = new Book(100)};
+//b.titel = "JAVA";
+
+console.log(Book.getVendor());
+
+
+

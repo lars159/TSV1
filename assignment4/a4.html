@@ -8,6 +8,8 @@
 
   </head>
   <body>
+      
+
       <div class="container">
           
           <span id="msg"></span>
@@ -18,10 +20,34 @@
         b: <input class="form-controll" id="b">
         a+b: <span id="c"></span>
         <button class="btn btn-info" id="calcBtn">calc</button>
+          <button class="btn btn-info" onclick="minus()">minus</button>
         
       </div>
       
+      <script>
+          var selectorOfA = document.querySelector("#a");
+          var selectorOfB = document.querySelector("#b");
+          
+          function add(){
+            var a =  selectorOfA.value;
+            var b = selectorOfB.value;
+            var intA = parseInt(a);
+             var intB = parseInt(b);
+            document.querySelector("#c").innerHTML = intA + intB;
+        }
+          
+        function minus(){
+            var a = document.querySelector("#a").value;
+            var b = document.querySelector("#b").value;
+            var intA = parseInt(a);
+             var intB = parseInt(b);
+            document.querySelector("#c").innerHTML = intA - intB;
+        }
+          
+         document.querySelector("#calcBtn").addEventListener("click", add)
+      </script>
+      
        
-      <script src="app.js" type="application/javascript"></script>
+
   </body>
 </html>

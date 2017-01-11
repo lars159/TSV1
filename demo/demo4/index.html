@@ -1,0 +1,45 @@
+<html>
+
+<body>
+    <!--
+    <script>
+        var a = 3.1;
+        var b= 4.1;
+        var c= true;
+        var arr = [1,"test",3,"hello",5];
+        
+        
+        console.log(arr);
+        if ( a > 2) {
+            alert(a + b);
+        }
+    
+    </script>
+-->
+ 
+    <span>JavaScript Demo</span>
+    <input id="a-class" type="text" name="a" >
+    <button id="click-button"   >Add one</button>
+    <script>
+        
+        function doHandelClick(){
+             var aValue= document.querySelector("#a-class").value;
+             console.log("value of " +aValue);
+        }
+        
+        var holder = {};
+        holder.click = doHandelClick;
+        holder.click();
+        
+        
+        document
+            .querySelector("#click-button")
+            .addEventListener("click", holder.click );
+       
+   
+    </script>
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+<head>
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+    <style>
+    
+        .red {
+            color: red;
+            
+        }
+    
+    
+    </style>
+    
+    <script>
+        console.log($);
+        /*
+        $("#my-button").click( function (){
+            document.querySelector("#first-div").innerHTML = "hello 2";
+          
+            $("#first-div").text("hello 3");
+        })
+        $("#my-button").click( function (){
+            $("#first-ul").append("<li class='red'>new</li>");
+        })
+        
+
+        $(document).ready(function(){
+            var li = $("li");
+            console.log(li);
+            li.addClass("red");
+        })
+        */
+ 
+
+    </script>
+    
+</head>
+<body>
+    <ul id="first-ul"> 
+        <li>row 1</li>
+        <li>row 2</li>
+        <li>row 3</li>
+    </ul>
+    
+    <button id="my-button"> change text</button>
+    
+    <button id="hide"> hide</button>
+    
+
+    <script>
+         var li = $("li");
+ 
+        li.each(function(nummber, l){
+            console.log(nummber);
+            $(l).addClass('red');
+        })
+        
+        $("#hide").click( function (){
+            $("body").append("<button>ss</button");
+        })
+        
+        $( "body" ).on("click", "button", function() {
+              console.log( "test");
+        });
+    </script>
+</body>    
+</html>
